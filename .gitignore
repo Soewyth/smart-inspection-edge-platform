@@ -1,0 +1,39 @@
+# Datasets
+datasets/raw/
+datasets/processed/
+data/raw
+data/processed
+
+
+# Virtual environments
+.venv/
+venv/
+.env
+.env.*
+
+# IDE / OS
+.vscode/
+.DS_Store
+*.log
+.idea/
+
+# Python cache
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Build
+dist/
+build/
+*.egg-info/
+
+
+# Artifacts
+outputs/
+
+# Weights of models:
+*.pth
+*.pt
+*.onnx
+*.engine
