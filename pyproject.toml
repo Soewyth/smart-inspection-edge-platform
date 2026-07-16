@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smart-inspection-edge-platform"
+version = "0.1.0"
+description = "Smart Inspection Edge Platform for Computer Vision Applications (industrial inspection)"
+requires-python = ">=3.10"
+dependencies = [
+"numpy>=2.5,<3.0",
+"scipy>=1.18,<2.0",
+"scikit-learn>=1.9,<2.0",
+"matplotlib>=3.11,<4.0",
+"fastapi>=0.139,<0.140",
+"uvicorn>=0.51,<0.52",
+"streamlit>=1.59,<2.0",
+"pyyaml>=6.0,<7.0",
+"torch>=2.13,<3.0",
+"torchvision>=0.28,<0.29"
+
+]
+
+[project.optional-dependencies]
+dev = [
+"ruff>=0.15,<0.16",
+"pytest>=9.1,<10.0"
+]
+edge = [
+"onnx>=1.22,<2.0",
+"onnxruntime>=1.27,<2.0"
+]
+
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["smart_inspection*"]
+
+[tool.ruff]
+line-length = 150
+target-version = "py310"
+include = ["src/**/*.py", "tests/**/*.py"]
+exclude = [".git", "__pycache__", "build", "dist","LICENSE", ]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

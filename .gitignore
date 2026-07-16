@@ -1,8 +1,5 @@
 # Datasets
-datasets/raw/
-datasets/processed/
-data/raw
-data/processed
+datasets/
 
 
 # Virtual environments
