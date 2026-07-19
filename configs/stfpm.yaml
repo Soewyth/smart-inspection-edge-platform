@@ -1,0 +1,8 @@
+params:
+  n_epochs: 15 #
+  batch_size: 32
+  optimizer: sgd # only sgd can be used for stfpm, but write here explictly for clarity
+  momentum: 0.9 # Standard value for sgd optimizer
+  learning_rate: 0.0001
+  pre_trained: true
+  validation_ratio: 0.2

@@ -22,6 +22,8 @@ setup:
 	$(PYTHON) -m venv .venv && \
 	.venv/bin/pip install --upgrade pip && \
 	.venv/bin/pip install -e .[dev,edge]
+	@echo "Setup complete. Activate the venv with: source .venv/bin/activate"
+
 
 test: 
 	@echo "Running unit tests..."
